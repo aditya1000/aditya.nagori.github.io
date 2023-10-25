@@ -21,7 +21,7 @@ I seek roles that harness the synergy of data-driven insights and medical resear
 ```{=html}
 <div class="grid" style="--bs-columns: 1; row-gap: 0;">
   <picture>
-    <img class="img-fluid" style="border-radius: 50%;" src="https://twitter.com/AdiNgr7/photo">
+    <img class="img-fluid" style="border-radius: 50%;" src="https://github.com/aditya1000/aditya.nagori.github.io/blob/main/Aditya_pic.jpg">
   </picture>
 </div>
 ```
