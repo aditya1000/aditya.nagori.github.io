@@ -1,0 +1,12 @@
+/.quarto/*
+/_site/*
+/_book/
+**/.jupyter_cache/
+.vdoc.jl
+*.ipynb
+/site_libs/*
+**/*_files/*
+/.quarto/
+/.luarc.json
+/node_modules
+.sverto
