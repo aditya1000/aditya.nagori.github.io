@@ -100,8 +100,9 @@
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Increased min size to 300px */
-    gap: 20px; /* Adjust the gap for spacing between items */
-    padding: 20px; /* Padding around the entire grid */
+    justify-content: center; /* Center items horizontally */
+    gap: 40px; /* Adjust the gap for spacing between items */
+    padding: 40px; /* Padding around the entire grid */
   }
   
   .grid-item {
