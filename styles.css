@@ -55,6 +55,8 @@
     left: 10px; /* Position the text from the left of the header */
     z-index: 1; /* Ensure the text is above the background image but below the profile picture */
   }
+
+
   
   header h1 {
     font-size: 2.5rem;
@@ -94,7 +96,44 @@
     margin-bottom: 20px;
     border-bottom: 2px solid #005a87;
   }
+ 
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min size to 300px */
+    gap: 20px; /* Adjust the gap for spacing between items */
+    padding: 20px; /* Padding around the entire grid */
+  }
   
+  .grid-item {
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    overflow: hidden; /* Ensures the content fits in the grid item */
+    position: relative; /* Needed for absolute positioning of title */
+  }
+  
+  .grid-item-title {
+    font-weight: bold; /* Make the title text bold */
+    text-align: right; /* Align the title to the right */
+    width: 100%; /* Full width */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* White text color */
+    padding: 8px; /* Padding inside the title bar */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+  
+  .grid-item img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Keeps the image's aspect ratio */
+    display: block; /* Removes bottom space under the image */
+  }
+  
+  /* Adjustments for responsiveness */
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust size for smaller screens */
+    }
+  }
   /* Cards for publications or projects */
   .card {
     background: #fff;

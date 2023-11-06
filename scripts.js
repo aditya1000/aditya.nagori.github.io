@@ -37,3 +37,31 @@ document.addEventListener("DOMContentLoaded", function() {
       return html;
     }).join(''); // Join all entries' HTML
   }
+
+
+  // Add to your existing scripts.js or create a new one
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 1000); // Change image every second
+}
+
+function plusSlides(n) {
+  slideIndex += n;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  if (slideIndex < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block"; 
+}
