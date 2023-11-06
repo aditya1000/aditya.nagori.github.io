@@ -1,0 +1,155 @@
+/* Basic reset for styling consistency */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    font-size: 18px;
+  }
+  
+  /* Main content area */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 20px;
+  }
+  
+  /* Header styles with a background image related to biomedical data science */
+  header {
+    background: url('3b5105ae-11f9-49ce-a2b9-0b8bb367de5a.webp') no-repeat center center/cover;
+    height: 400px; /* Adjust the height as necessary to show the image */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative; /* To position elements inside the header relative to this container */
+    padding: 20px; /* Add some padding */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+  }
+  /* Profile picture styles */
+.profile-picture {
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    border-radius: 50%;
+    border: 4px solid #fff; /* A white border around the profile picture */
+    position: absolute; /* Position it absolutely within the header */
+    top: 50%; /* Center it vertically */
+    left: 10%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Offset by half the width and height to truly center */
+    z-index: 2; /* Ensure it's above the background image */
+  }
+  
+  /* Header text styles, if you have any */
+  .header-text {
+    position: absolute; /* Position the text absolutely within the header */
+    bottom: 10px; /* Position the text at the bottom of the header */
+    left: 10px; /* Position the text from the left of the header */
+    z-index: 1; /* Ensure the text is above the background image but below the profile picture */
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Navigation bar */
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background: #005a87;
+    padding: 10px;
+  }
+  
+  nav ul li {
+    padding: 0 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  
+  nav ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+  }
+  
+  /* Section headings */
+  h2 {
+    color: #005a87;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #005a87;
+  }
+  
+  /* Cards for publications or projects */
+  .card {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-left: 5px solid #005a87;
+  }
+  
+  /* Styling for buttons, e.g., Download CV */
+  .btn {
+    display: inline-block;
+    background: #e7e7e7;
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btn-primary {
+    background: #005a87;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background: #003f63;
+  }
+  
+  /* Footer styles */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50; /* A slightly lighter shade of dark blue */
+    color: #fff;
+  }
+  
+  /* Media query for mobile responsiveness */
+  @media (max-width: 700px) {
+    .container,
+    header,
+    nav ul,
+    .card,
+    footer {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    nav ul li {
+      padding: 10px;
+    }
+  }
