@@ -1,2 +1,2 @@
 
-Its my personal website hosting my cv, publications, & apps.  
+Its a website hosting my cv, publications, & apps.  
