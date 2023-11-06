@@ -99,7 +99,7 @@
  
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min size to 300px */
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Increased min size to 300px */
     gap: 20px; /* Adjust the gap for spacing between items */
     padding: 20px; /* Padding around the entire grid */
   }
