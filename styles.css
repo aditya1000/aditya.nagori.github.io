@@ -42,8 +42,8 @@
     border-radius: 50%;
     border: 4px solid #fff; /* A white border around the profile picture */
     position: absolute; /* Position it absolutely within the header */
-    top: 50%; /* Center it vertically */
-    left: 10%; /* Center it horizontally */
+    top: 35%; /* Center it vertically */
+    left: 7%; /* Center it horizontally */
     transform: translate(-50%, -50%); /* Offset by half the width and height to truly center */
     z-index: 2; /* Ensure it's above the background image */
   }
@@ -133,6 +133,42 @@
     color: #fff;
   }
   
+/* Default link styles (for light backgrounds) */
+a {
+    color: #333333; /* Dark grey color for links on light background */
+    text-decoration: none; /* Removes underline from links */
+  }
+  
+  a:hover {
+    color: #000000; /* Black color on hover for better visibility */
+    text-decoration: underline; /* Adds underline on hover for links */
+  }
+  
+  /* Dark background link styles */
+  .dark-background a {
+    color: #d3d3d3; /* Light grey color for links on dark background */
+  }
+  
+  .dark-background a:hover {
+    color: #ffffff; /* White color on hover for better visibility */
+    text-decoration: underline; /* Adds underline on hover for links */
+  }
+  
+  /* Footer styles assuming a dark background */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50; /* A dark background color */
+    color: #fff;
+  }
+  
+  footer a {
+    color: #d3d3d3; /* Light grey color for links in the footer */
+  }
+  
+  footer a:hover {
+    color: #ffffff; /* White color on hover for better visibility */
+  }
   /* Media query for mobile responsiveness */
   @media (max-width: 700px) {
     .container,
