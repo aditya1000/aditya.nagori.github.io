@@ -69,7 +69,7 @@
     display: flex;
     font-size: 20px;
     justify-content: center;
-    background: #005a87;
+    background: #2c3e50;
     padding: 10px;
   }
   
@@ -173,7 +173,16 @@
     background: #2c3e50; /* A slightly lighter shade of dark blue */
     color: #fff;
   }
-  
+
+  .download-cv{
+    margin: 30px; /* Adjust the value as needed */
+    /* Other styles for your link */
+  }
+  .download-resume{
+    margin: 30px; /* Adjust the value as needed */
+    /* Other styles for your link */
+  }
+
 /* Default link styles (for light backgrounds) */
 a {
     color: #333333; /* Dark grey color for links on light background */
