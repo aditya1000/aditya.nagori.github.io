@@ -100,7 +100,7 @@
  
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); /* Increased min size to 300px */
+    grid-template-columns: repeat(auto-fill, minmax(620px, 1fr)); /* Increased min size to 300px */
     justify-content: center; /* Center items horizontally */
     gap: 40px; /* Adjust the gap for spacing between items */
     padding: 40px; /* Padding around the entire grid */
@@ -135,6 +135,29 @@
     .grid-container {
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust size for smaller screens */
     }
+  }
+
+  /* Add to your existing styles.css */
+
+  .grid-item {
+    /* ... other styles ... */
+    transition: transform 0.3s ease;
+    position: relative; /* To correctly position the pseudo-elements */
+    overflow: hidden; /* To contain the zoom within the grid item */
+  }
+  
+  /* Pseudo-elements to detect the edge items */
+  .grid-item:nth-child(3n+1) {
+    transform-origin: center left;
+  }
+  
+  .grid-item:nth-child(3n) {
+    transform-origin: center right;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.25);
+    z-index: 10; /* To bring the item above others on hover */
   }
   /* Cards for publications or projects */
   .card {

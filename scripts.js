@@ -65,3 +65,23 @@ function plusSlides(n) {
   }
   slides[slideIndex-1].style.display = "block"; 
 }
+
+
+function adjustTransformOrigin() {
+  const gridItems = document.querySelectorAll('.grid-item');
+  gridItems.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    // Check if the item is on the left or right edge
+    if (rect.left < 10) { // 10 pixels as a threshold for the left edge
+      item.style.transformOrigin = 'center left';
+    } else if (window.innerWidth - rect.right < 10) { // 10 pixels as a threshold for the right edge
+      item.style.transformOrigin = 'center right';
+    } else {
+      item.style.transformOrigin = 'center';
+    }
+  });
+}
+
+// Run the function on load and when the window is resized
+window.addEventListener('load', adjustTransformOrigin);
+window.addEventListener('resize', adjustTransformOrigin);
