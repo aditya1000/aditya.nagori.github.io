@@ -22,7 +22,7 @@
     padding: 0 20px;
   }
   
-  /* Header styles with a background image related to biomedical data science */
+  /* Header styles*/
   header {
     background: url('Net.png') no-repeat center center/cover;
     height: 600px; /* Adjust the height as necessary to show the image */
@@ -89,6 +89,10 @@
     text-decoration: underline;
   }
   
+  p{
+    text-align: center;
+    padding: 0 50px;
+  }
  
   h2 {
     color: #005a87;
