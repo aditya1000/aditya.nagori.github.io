@@ -24,7 +24,7 @@
   
   /* Header styles*/
   header {
-    background: url('Net.png') no-repeat center center/cover;
+    background: url('assets/Net.png') no-repeat center center/cover;
     height: 600px; /* Adjust the height as necessary to show the image */
     color: #fff;
     display: flex;
