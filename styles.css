@@ -151,11 +151,11 @@
   }
   
   /* Pseudo-elements to detect the edge items */
-  .grid-item:nth-child(3n+1) {
+  .grid-item:nth-child(2n+1) {
     transform-origin: center left;
   }
   
-  .grid-item:nth-child(3n) {
+  .grid-item:nth-child(2n) {
     transform-origin: center right;
   }
   
