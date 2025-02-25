@@ -29,7 +29,7 @@ body {
   header {
     background: url('assets/Net.png') no-repeat center center/cover;
     height: 500px; /* Adjust the height as necessary to show the image */
-    color: #0b0303a9;
+    color: #202021;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +44,7 @@ body {
     width: 200px; /* Set the desired width */
     height: 200px; /* Set the desired height */
     border-radius: 50%;
-    border: 4px solid #7dadc8b8; /* A white border around the profile picture */
+    border: 4px solid #202021; /* A white border around the profile picture */
     position: absolute; /* Position it absolutely within the header */
     top: 55%; /* Center it vertically */
     left: 14%; /* Center it horizontally */
@@ -118,20 +118,21 @@ body {
   }
   
   /* Recent Deployments */
-  #deployments ul {
+  #Recent ul {
     list-style: none;
     padding-left: 0;
   }
   
-  #deployments li {
+  #Recent li {
     margin: 10px 0;
   }
   
-  /* Grid for Research */
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); /* Increased min size to 300px */
+    justify-content: center; /* Center items horizontally */
+    gap: 40px; /* Adjust the gap for spacing between items */
+    padding: 40px; /* Padding around the entire grid */
   }
   
   .grid-item {
@@ -142,20 +143,63 @@ body {
     transition: transform 0.3s ease;
   }
   
-  .grid-item:hover {
-    transform: translateY(-5px);
-  }
-  
   .grid-item-title {
     font-weight: bold;
     margin-bottom: 10px;
   }
   
+  .grid-item img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Keeps the image's aspect ratio */
+    display: block; /* Removes bottom space under the image */
+  }
+  
+  /* Adjustments for responsiveness */
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust size for smaller screens */
+    }
+  }
+
+  /* Add to your existing styles.css */
+
+  .grid-item {
+    /* ... other styles ... */
+    transition: transform 0.3s ease;
+    position: relative; /* To correctly position the pseudo-elements */
+    overflow: hidden; /* To contain the zoom within the grid item */
+  }
+  
+  /* Pseudo-elements to detect the edge items */
+  .grid-item:nth-child(2n+1) {
+    transform-origin: center left;
+  }
+  
+  .grid-item:nth-child(2n) {
+    transform-origin: center right;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.25);
+    z-index: 10; /* To bring the item above others on hover */
+  }
+  /* Cards for publications or projects */
+  .card {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-left: 5px solid #005a87;
+  }
+  
   /* Footer */
   footer {
-    background: #aad0da87;
+    background: #202021;
     color: #fff;
     text-align: center;
     padding: 20px;
+  }
+  
+  footer a {
+    color: #293285; /* Light grey color for links in the footer */
   }
   
