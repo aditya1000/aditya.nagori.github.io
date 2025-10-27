@@ -41,8 +41,8 @@ body {
   
   /* Profile picture styles */
   .profile-picture {
-    width: 200px; /* Set the desired width */
-    height: 200px; /* Set the desired height */
+    width: 180px; /* Set equal width and height for perfect circle */
+    height: 180px; /* Set equal width and height for perfect circle */
     border-radius: 50%;
     border: 4px solid #202021; /* A white border around the profile picture */
     position: absolute; /* Position it absolutely within the header */
@@ -50,6 +50,8 @@ body {
     left: 14%; /* Center it horizontally */
     transform: translate(-50%, -50%); /* Offset by half the width and height to truly center */
     z-index: 2; /* Ensure it's above the background image */
+    object-fit: cover; /* Ensures image covers the entire circle without distortion */
+    object-position: center; /* Centers the image within the circle */
   }
   
   /* Header text styles, if you have any */
