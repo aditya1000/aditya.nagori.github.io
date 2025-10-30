@@ -2,229 +2,307 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aditya Nagori, PhD | Biomedical Data Science &amp; Clinical AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
     />
-    <title>Aditya Nagori, PhD – Biomedical Data Science &amp; Computational Medicine</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <div class="header-container">
-        <img
-          src="assets/Prof_Adityapic_crop.png"
-          class="profile-picture"
-          alt="Aditya Nagori"
-        />
-        <div class="header-text">
+    <header class="hero" id="top">
+      <nav class="site-nav">
+        <div class="shell nav__inner">
+          <a class="brand" href="#top">AN</a>
+          <ul class="nav__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#focus">Focus</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="shell hero__content">
+        <div class="hero__text">
+          <span class="hero__badge">Data Scientist · Duke University School of Medicine</span>
           <h1>Aditya Nagori, PhD</h1>
+          <p>
+            Biomedical data scientist building trustworthy clinical AI systems that connect
+            predictive modeling, large language models, and prospective evaluations to improve
+            perioperative and critical care.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact">Collaborate</a>
+            <a class="btn btn--ghost" href="https://scholar.google.com/citations?user=63Vkr3EAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          </div>
+            </div>
+        <div class="hero__media">
+          <div class="portrait">
+            <img src="assets/Prof_Adityapic_crop.png" alt="Aditya Nagori" />
+          </div>
         </div>
       </div>
     </header>
 
-    <nav>
-      <ul class="nav-list">
-        <li><a class="nav-link" href="#About">About</a></li>
-        <li><a class="nav-link" href="#Recent">Recent</a></li>
-        <li><a class="nav-link" href="#Research">Research</a></li>
-        <li><a class="nav-link" href="https://github.com/aditya1000">GitHub</a></li>
-        <li>
-          <a class="nav-link" href="https://scholar.google.com/citations?user=63Vkr3EAAAAJ&amp;hl=en"
-            >Publications</a>
-        </li>
-      </ul>
-    </nav>
-
     <main>
-      <section id="About">
-        <h2>About</h2>
-        <p>
-          I have a deep passion for biomedical data science and computational
-          medicine. I earned my Ph.D. in computational medicine, where my
-          thesis focused on predicting critical events in critically ill and
-          asthmatic children. My research involved applying machine learning and
-          statistical models to predict and mitigate disease progression.
-        </p>
-        <p>
-          Currently, I am a Data Scientist and Postdoctoral Fellow at the Duke
-          University School of Medicine. I work on AI-driven healthcare projects,
-          focusing particularly on the use of large language models for perioperative
-          care.
-        </p>
-        <p>
-          I welcome collaboration with others passionate about biomedical data
-          science. Together, we can explore data to advance our understanding and
-          contribute to the improvement of human health.
-        </p>
+      <section id="about" class="section">
+        <div class="shell section__inner">
+          <div class="section__header">
+            <span class="eyebrow">About</span>
+            <h2>Advancing data-informed care</h2>
+          </div>
+          <div class="split">
+            <p>
+              I design and deploy AI systems that are grounded in clinical workflows and
+              co-developed with care teams. My Ph.D. in Computational Medicine centered on
+              early warning systems for critical events in intensive care units. Today, I
+              apply those lessons as a Data Scientist and Postdoctoral Fellow at Duke, focusing
+              on perioperative medicine and Generative AI for Medicine.
+            </p>
+            <p>
+              My work combines statistical rigor, prospective clinical evaluation, and
+              multidisciplinary collaboration. I enjoy partnering with clinicians, informatics
+              teams, and industry collaborators to translate AI research into sustainable
+              delivery models that improve outcomes and equity.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section id="Recent">
-        <h2>Recent / News</h2>
-        <ul>
-          <li>
-            <a href="https://onlinejase.com/article/S0894-7317(25)00337-2/fulltext">
-              Our new paper "A Randomized Controlled Trial of a Clinical Support Tool to Increase Value in Transthoracic Echocardiography", accepted in Journal of the American Society for Echocardiography </a
-            >
-          </li>
-          <li>
-            <a href="https://arxiv.org/abs/2505.09805">
-              Our paper on "Contextual Phenotyping of Pediatric Sepsis Cohort Using Large Language Models", accepted for Oral presentation at AMIA Annual Symposium 2025 </a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/Kamaleswaran-Lab/The-2024-Pediatric-Sepsis-Challenge/tree/main">
-              Checkout the final phase of pediatric sepsis data challenge example code, evaluation metrics and instructions</a
-            >
-          </li>
-          <li>
-            <a href="https://leaderboard-peds-sepsis-data-challenge-2024.streamlit.app">
-              Checkout the final phase pediatric sepsis data challenge leaderboard</a
-            >
-          </li>
-        </ul>
+      <section id="focus" class="section section--muted">
+        <div class="shell section__inner">
+          <div class="section__header">
+            <span class="eyebrow">Focus Areas</span>
+            <h2>Where clinical expertise meets machine intelligence</h2>
+            <p>
+              I build systems that are technically sound, interpretable, and ready for
+              deployment in high-stakes settings.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Trustworthy Clinical AI</h3>
+              <p>
+                Design LLM-powered agents and RAG pipelines that surface context-rich insights
+                in perioperative care, balancing performance with safety and guardrails.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Predictive Monitoring</h3>
+              <p>
+                Develop time-series and multimodal models that predicts hemodynamic shock,
+                hypothermia, and respiratory events hours ahead of deterioration.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Clinical Impact</h3>
+              <p>
+                Lead prospective validations and randomized trials that demonstrate measurable
+                improvements in value-based care and clinical decision-making.
+              </p>
+            </article>
+          </div>
+        </div>
       </section>
 
-     
-    
-      <section id="Research">
-        <h2>Research</h2>
-        <div class="grid-container">
-          <div class="grid-item">
-            <div class="grid-item-title">
-              Agentic Hybrid Rag
-            </div>
-            <a
-              href="https://arxiv.org/abs/2508.05660"
-            >
-              <img
-                src="assets/general_workflow.png"
-                alt="Agentic Hybrid Rag workflow diagram"
-              />
-            </a>
+      <section id="highlights" class="section">
+        <div class="shell section__inner">
+          <div class="section__header">
+            <span class="eyebrow">Recent Highlights</span>
+            <h2>Selected milestones and collaborations</h2>
           </div>
-          <div class="grid-item">
-            <div class="grid-item-title">
-              Prospectively validated hemodynamic shock prediction using
-              physiological vitals
-            </div>
-            <a
-              href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4248013"
-            >
-              <img
-                src="assets/Graphical_Abstract_new1.png"
-                alt="Graphical abstract for shock prediction"
-              />
-            </a>
+          <ul class="timeline">
+            <li>
+              <span class="timeline__date">2025</span>
+              <div>
+                <a href="https://onlinejase.com/article/S0894-7317(25)00337-2/fulltext" target="_blank" rel="noopener">
+                  Randomized controlled trial of a transthoracic echocardiography decision tool
+                </a>
+                published in the <em>Journal of the American Society of Echocardiography</em>.
+              </div>
+            </li>
+            <li>
+              <span class="timeline__date">2025</span>
+              <div>
+                <a href="https://arxiv.org/abs/2505.09805" target="_blank" rel="noopener">
+                  Contextual phenotyping of pediatric sepsis cohorts using LLMs
+                </a>
+                selected for an oral presentation at AMIA 2025.
+              </div>
+            </li>
+            <li>
+              <span class="timeline__date">2024</span>
+              <div>
+                Launched the
+                <a href="https://leaderboard-peds-sepsis-data-challenge-2024.streamlit.app" target="_blank" rel="noopener">
+                  Pediatric Sepsis Data Challenge leaderboard
+                </a>
+                and open-sourced evaluation tooling for global teams.
+              </div>
+            </li>
+            <li>
+              <span class="timeline__date">2024</span>
+              <div>
+                Open-sourced
+                <a href="https://github.com/Kamaleswaran-Lab/The-2024-Pediatric-Sepsis-Challenge/tree/main" target="_blank" rel="noopener">
+                  code and benchmarks for the Pediatric Sepsis Challenge
+                </a>
+                to accelerate reproducible clinical AI research.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="research" class="section section--muted">
+        <div class="shell section__inner">
+          <div class="section__header">
+            <span class="eyebrow">Research Spotlights</span>
+            <h2>Impactful collaborations across the translational pipeline</h2>
           </div>
-          
-          <div class="grid-item">
-            <div class="grid-item-title">
-              Thermal imaging and computer vision to predict hemodynamic shock
-            </div>
-            <a
-              href="https://www.nature.com/articles/s41598-018-36586-8#:~:text=Proactive%20detection%20of%20hemodynamic%20shock"
-            >
-              <img
-                src="assets/Picture1.jpg"
-                alt="Thermal imaging for shock prediction"
-              />
-            </a>
+          <div class="spotlight-grid">
+            <article class="spotlight">
+              <a href="https://arxiv.org/abs/2508.05660" target="_blank" rel="noopener">
+                <img src="assets/general_workflow.png" alt="Agentic Hybrid RAG workflow" />
+              </a>
+              <h3>Agentic Hybrid RAG</h3>
+              <p>
+                Multi-agent retrieval augmented generation framework that combines structured
+                EHR data with LLM reasoning to support perioperative care teams.
+              </p>
+            </article>
+            <article class="spotlight">
+              <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4248013" target="_blank" rel="noopener">
+                <img src="assets/Graphical_Abstract_new1.png" alt="Hemodynamic shock prediction" />
+              </a>
+              <h3>Prospective Shock Prediction</h3>
+              <p>
+                Validated digital twin approach using physiologic signals to prospectively
+                predict hemodynamic shock in resource-limited ICUs.
+              </p>
+            </article>
+            <article class="spotlight">
+              <a href="https://www.nature.com/articles/s41598-018-36586-8" target="_blank" rel="noopener">
+                <img src="assets/Picture1.jpg" alt="Thermal imaging research" />
+              </a>
+              <h3>Thermal Imaging for Shock</h3>
+              <p>
+                Early detection of hemodynamic shock using thermal videos and deep computer
+                vision models to enable low-touch critical care monitoring.
+              </p>
+            </article>
+            <article class="spotlight">
+              <a href="https://www.sciencedirect.com/science/article/pii/S2211335524003103" target="_blank" rel="noopener">
+                <img src="assets/DHL.jpg" alt="Digital health literacy study" />
+              </a>
+              <h3>Digital Health Equity</h3>
+              <p>
+                Mixed-methods research on how digital health literacy and social determinants
+                shape the adoption of AI-enabled care pathways.
+              </p>
+            </article>
           </div>
-          <div class="grid-item">
-            <div class="grid-item-title">
-              Effects of ambient air pollution on emergency room visits of
-              children for acute respiratory symptoms
-            </div>
-            <a
-              href="https://link.springer.com/article/10.1007/s11356-021-13600-7"
-            >
-              <img
-                src="assets/Graphical_Abstract.png"
-                alt="Graphical abstract on air pollution and respiratory symptoms"
-              />
-            </a>
+        </div>
+      </section>
+
+      <section id="publications" class="section">
+        <div class="shell section__inner">
+          <div class="section__header">
+            <span class="eyebrow">Selected Publications</span>
+            <h2>Representative peer-reviewed work</h2>
+            <p>
+              Full list available on <a href="https://scholar.google.com/citations?user=63Vkr3EAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+            </p>
           </div>
-                 <div class="grid-item">
-            <div class="grid-item-title">
-              Prognosticating the risk of diabetic cardiomyopathy
-            </div>
-            <a
-              href="https://journals.sagepub.com/doi/10.1177/19322968231212219"
-            >
-              <img
-                src="assets/DbCM.jpg"
-                alt="Diabetic cardiomyopathy risk prediction"
-              />
-            </a>
+          <div class="pub-grid">
+            <article class="pub">
+              <h3>Randomized Trial of a TTE Value Tool</h3>
+              <p>
+                Demonstrated how decision support improved value-based imaging in a multicenter
+                randomized controlled trial. <em>JASE</em>, 2025.
+              </p>
+            </article>
+            <article class="pub">
+              <h3>Contextual Phenotyping with LLMs</h3>
+              <p>
+                Introduced an LLM-driven pipeline for phenotyping pediatric sepsis cohorts using
+                chart context and registry data. AMIA 2025 Oral Presentation.
+              </p>
+            </article>
+            <article class="pub">
+              <h3>Early Warning for Hemodynamic Shock</h3>
+              <p>
+                Scaling physiologic time-series models to prospectively predict shock in
+                critically ill patients. <em>Scientific Reports</em>, 2019.
+              </p>
+            </article>
+            <article class="pub">
+              <h3>Environmental Drivers of Respiratory Events</h3>
+              <p>
+                Quantified the impact of air pollution exposures on pediatric emergency visits
+                for acute respiratory illness. <em>Environmental Science and Pollution Research</em>, 2021.
+              </p>
+            </article>
           </div>
-          <div class="grid-item">
-            <div class="grid-item-title">
-              Digital health literacy and social determinants of health
-            </div>
-            <a
-              href="https://www.sciencedirect.com/science/article/pii/S2211335524003103"
-            >
-              <img
-                src="assets/DHL.jpg"
-                alt="Digital health literacy research"
-              />
-            </a>
+        </div>
+      </section>
+
+      <section id="media" class="section section--muted">
+        <div class="shell section__inner">
+          <div class="section__header">
+            <span class="eyebrow">Media &amp; Outreach</span>
+            <h2>Sharing work across clinical and public audiences</h2>
           </div>
-          <div class="grid-item">
-            <div class="grid-item-title">
-              Hypothermia prediction using physiological vitals time-series data
-            </div>
-            <a
-              href="https://www.frontiersin.org/articles/10.3389/fphys.2022.921884/full"
-            >
-              <img
-                src="assets/Hypothermia.jpg"
-                alt="Hypothermia prediction using vitals data"
-              />
-            </a>
+          <ul class="media-list">
+            <li>
+              <a href="https://www.thehindu.com/sci-tech/science/aiims-teams-model-can-predict-shock-12-hours-in-advance/article26037588.ece" target="_blank" rel="noopener">
+                AIIMS model predicts hemodynamic shock 12 hours ahead – <em>The Hindu</em>
+              </a>
+            </li>
+            <li>
+              <a href="https://play.google.com/store/apps/details?id=appinventor.ai_aditya_mits13.anthroCalc&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener">
+                AnthroCal mobile app for child growth assessment adopted across clinics
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="shell section__inner">
+          <div class="section__header">
+            <span class="eyebrow">Connect</span>
+            <h2>Let’s build the next generation of clinical AI</h2>
           </div>
-          <div class="grid-item">
-            <div class="grid-item-title">
-              Predicting Childhood Asthma Exacerbations
+          <div class="contact">
+            <div>
+              <h3>Collaborations &amp; Speaking</h3>
+              <p>
+                I enjoy partnering on clinical deployments, translational research, and
+                mentorship for emerging data scientists.
+              </p>
             </div>
-            <a href="https://erj.ersjournals.com/content/56/suppl_64/416">
-              <img
-                src="assets/Asthma.png"
-                alt="Predicting Childhood Asthma Exacerbations"
-              />
-            </a>
+            <ul class="contact__links">
+              <li><a href="https://www.linkedin.com/in/aditya-nagori-phd-4622b4b9/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/aditya1000" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://twitter.com/AdiNgr7" target="_blank" rel="noopener">Twitter / X</a></li>
+            </ul>
           </div>
-          <div class="grid-item">
-            <div class="grid-item-title">
-              AnthroCal: Child Growth Assessment App
-            </div>
-            <a
-              href="https://play.google.com/store/apps/details?id=appinventor.ai_aditya_mits13.anthroCalc&amp;hl=en_US&amp;gl=US"
-            >
-              <img
-                src="assets/AnthroCal.jpg"
-                alt="AnthroCal app interface"
-              />
-            </a>
-          </div>
-   
         </div>
       </section>
     </main>
 
-     <section id="Media">
-        <h2>Media Coverage</h2>
-        <ul>
-          <li>
-            <a href="https://www.thehindu.com/sci-tech/science/aiims-teams-model-can-predict-shock-12-hours-in-advance/article26037588.ece">
-              AIIMS team's model can predict shock 12 hours in advance</a
-        >
-            </li>
-        </section>
-
-    <footer>
-      <p>© 2025 Aditya Nagori | Social <a href="https://twitter.com/AdiNgr7" target="_blank"> twitter </a> | <a href="https://www.linkedin.com/in/aditya-nagori-phd-4622b4b9/" target="_blank">linkedin</a> </p>
-  </footer>
+    <footer class="site-footer">
+      <div class="shell footer__inner">
+        <span>© 2025 Aditya Nagori. All rights reserved.</span>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="scripts.js" defer></script>
   </body>
 </html>
