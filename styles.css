@@ -369,6 +369,16 @@ img {
   font-size: 1.15rem;
 }
 
+.pub__link {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.pub__link:hover,
+.pub__link:focus {
+  color: var(--accent);
+}
+
 .pub p {
   margin: 0;
   color: var(--text-muted);
