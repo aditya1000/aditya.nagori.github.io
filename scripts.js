@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Navbar scroll shadow (al-folio behavior)
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    });
+  }
+
+  // BibTeX parser (kept for citations.bib if needed)
   const publicationsContainer = document.getElementById('publications-container');
   if (!publicationsContainer) {
     return;
