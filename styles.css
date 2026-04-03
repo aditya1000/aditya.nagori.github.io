@@ -21,7 +21,7 @@
   --global-card-bg-color: #ffffff;
   --global-highlight-color: #b71c1c;
 
-  --max-content-width: 930px;
+  --max-content-width: 1100px;
   --font-body: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   --font-heading: 'Roboto Slab', Georgia, serif;
 }
@@ -359,16 +359,16 @@ img {
 .pub-year {
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--global-divider-color);
+  font-weight: 700;
+  color: var(--global-text-color);
   padding-top: 0.75rem;
   margin-bottom: 1rem;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0.5rem;
   user-select: none;
 }
