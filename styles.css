@@ -287,6 +287,23 @@ img {
   font-size: 0.88rem;
 }
 
+/* Link-preview thumbnails in news rows */
+.news-td--has-thumb {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+.news-thumb {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  background: var(--global-divider-color);
+  border: 1px solid var(--global-divider-color);
+}
+
 /* Talks & Posters collapsible */
 .talks-details {
   margin-top: 1.5rem;

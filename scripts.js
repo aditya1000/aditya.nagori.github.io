@@ -21,6 +21,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // === News link-preview thumbnails via Microlink API ===
+  ;(function () {
+    const CACHE_KEY = 'np_v2';
+    let cache = {};
+    try { cache = JSON.parse(sessionStorage.getItem(CACHE_KEY)) || {}; } catch (_) {}
+    function saveCache() {
+      try { sessionStorage.setItem(CACHE_KEY, JSON.stringify(cache)); } catch (_) {}
+    }
+    function applyThumb(td, src) {
+      if (!src) return;
+      const img = document.createElement('img');
+      img.className = 'news-thumb';
+      img.src       = src;
+      img.alt       = '';
+      img.loading   = 'lazy';
+      img.decoding  = 'async';
+      img.onerror   = () => img.remove();
+      td.classList.add('news-td--has-thumb');
+      td.insertBefore(img, td.firstChild);
+    }
+    document.querySelectorAll('.news-table tr').forEach(tr => {
+      const td = tr.querySelector('td:not(.news-date)');
+      if (!td) return;
+      const a = td.querySelector('a[href^="http"]');
+      if (!a) return;
+      const url = a.href;
+      if (Object.prototype.hasOwnProperty.call(cache, url)) {
+        applyThumb(td, cache[url]);
+        return;
+      }
+      fetch('https://api.microlink.io/?url=' + encodeURIComponent(url))
+        .then(r => r.json())
+        .then(({ data }) => {
+          const src = data?.image?.url || data?.logo?.url || null;
+          cache[url] = src;
+          saveCache();
+          if (src) applyThumb(td, src);
+        })
+        .catch(() => { cache[url] = null; saveCache(); });
+    });
+  })();
+
   // BibTeX parser (kept for citations.bib if needed)
   const publicationsContainer = document.getElementById('publications-container');
   if (!publicationsContainer) {
