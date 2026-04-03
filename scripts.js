@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // BibTeX cite toggle
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-cite')) {
+      const entry = e.target.closest('.pub-entry');
+      if (entry) {
+        const block = entry.querySelector('.bib-block');
+        if (block) {
+          block.classList.toggle('open');
+          e.target.classList.toggle('active');
+        }
+      }
+    }
+  });
+
   // BibTeX parser (kept for citations.bib if needed)
   const publicationsContainer = document.getElementById('publications-container');
   if (!publicationsContainer) {

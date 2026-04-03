@@ -89,193 +89,78 @@
       </div>
     </section>
 
-    <!-- News -->
-    <section id="news" class="content-section">
+    <!-- Projects + Publications + News -->
+    <section class="content-section">
       <div class="container">
-        <h2 class="section-title">news</h2>
-        <table class="news-table">
-          <tbody>
-            <tr>
-              <td class="news-date">Mar 2026</td>
-              <td>
-                New version of <a href="https://play.google.com/store/apps/details?id=appinventor.ai_aditya_mits13.anthroCalc&hl=en_US" target="_blank" rel="noopener"><strong>AnthroCal</strong></a> launched on Google Play &mdash; a mobile app for child growth assessment.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">Mar 2026</td>
-              <td>
-                Our paper <em>Phenotyping of General Surgery Patients for Intraoperative Risk Using Preoperative Waveform Data</em> accepted for oral presentation at <strong>AMIA 2026 Amplify: Informatics Summit</strong>, Denver, May 18&ndash;21, 2026.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">Jun 2025</td>
-              <td>
-                Our paper on <a href="https://arxiv.org/abs/2508.05660" target="_blank" rel="noopener">Agentic Hybrid RAG for scientific review</a> is now available on arXiv.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">May 2025</td>
-              <td>
-                <a href="https://www.sciencedirect.com/science/article/pii/S0894731725003372" target="_blank" rel="noopener">Randomized trial of a TTE decision tool</a> published in the <em>Journal of the American Society of Echocardiography</em>.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">May 2025</td>
-              <td>
-                <a href="https://arxiv.org/abs/2505.09805" target="_blank" rel="noopener">Contextual phenotyping of pediatric sepsis using LLMs</a> selected for oral presentation at <strong>AMIA 2025</strong>.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">2024</td>
-              <td>
-                Launched the <a href="https://leaderboard-peds-sepsis-data-challenge-2024.streamlit.app" target="_blank" rel="noopener">Pediatric Sepsis Data Challenge leaderboard</a> with open-sourced evaluation tooling for global teams.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">2024</td>
-              <td>
-                Open-sourced <a href="https://github.com/Kamaleswaran-Lab/The-2024-Pediatric-Sepsis-Challenge/tree/main" target="_blank" rel="noopener">code and benchmarks for the Pediatric Sepsis Challenge</a> to accelerate reproducible clinical AI.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">2024</td>
-              <td>
-                Study on <a href="https://www.sciencedirect.com/science/article/pii/S2211335524003103" target="_blank" rel="noopener">digital health literacy and social determinants</a> published in <em>Preventive Medicine Reports</em>.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">2023</td>
-              <td>
-                Study on <a href="https://doi.org/10.1016/j.ajpc.2023.100557" target="_blank" rel="noopener">social determinants in low-income heart failure</a> published in <em>American Journal of Preventive Cardiology</em>.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">2022</td>
-              <td>
-                <a href="https://www.frontiersin.org/articles/10.3389/fgene.2022.858252/full" target="_blank" rel="noopener">Genomic surveillance of COVID-19 variants with language models</a> published in <em>Frontiers in Genetics</em>.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">2020</td>
-              <td>
-                Book chapter on <a href="https://www.sciencedirect.com/science/article/pii/B9780128172261000017" target="_blank" rel="noopener">Interpretable AI in Healthcare</a> published by Elsevier in <em>Artificial Intelligence in Precision Health</em>.
-              </td>
-            </tr>
-            <tr>
-              <td class="news-date">2019</td>
-              <td>
-                First-author paper on <a href="https://www.nature.com/articles/s41598-018-36586-8" target="_blank" rel="noopener">predicting hemodynamic shock from thermal images</a> published in <em>Nature Scientific Reports</em>.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+        <div class="row g-4 g-lg-5">
 
-    <!-- Selected Publications -->
-    <section id="publications" class="content-section">
-      <div class="container">
-        <h2 class="section-title">selected publications</h2>
-        <p class="section-subtitle">
-          Full list on <a href="https://scholar.google.com/citations?user=63Vkr3EAAAAJ&hl=en" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a>.
-        </p>
+          <!-- Left: Projects + Publications -->
+          <div class="col-lg-7" id="projects">
+            <h2 class="section-title">projects</h2>
+            <div class="row g-3 project-grid">
+              <div class="col-sm-6">
+                <a class="project-card" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12919534/" target="_blank" rel="noopener">
+                  <img src="assets/projects/ped_sep_project.png" alt="Pediatric Sepsis Data Challenge" />
+                  <div class="project-card__body">
+                    <h4>Pediatric Sepsis Challenge</h4>
+                    <p>A composite clinical utility framework benchmarking 36 ML models across 14 countries for low-resource sepsis mortality prediction.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a class="project-card" href="https://arxiv.org/abs/2508.05660" target="_blank" rel="noopener">
+                  <img src="assets/projects/agentic_rag.png" alt="Agentic Hybrid RAG workflow" />
+                  <div class="project-card__body">
+                    <h4>Agentic Hybrid RAG</h4>
+                    <p>Multi-agent RAG for scientific literature review and perioperative reasoning.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a class="project-card" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4248013" target="_blank" rel="noopener">
+                  <img src="assets/projects/prospective_vitals_ml.png" alt="Hemodynamic shock prediction" />
+                  <div class="project-card__body">
+                    <h4>Prospective Shock Prediction</h4>
+                    <p>Validated shock forecasting in resource-limited pediatric ICUs.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a class="project-card" href="https://www.nature.com/articles/s41598-018-36586-8" target="_blank" rel="noopener">
+                  <img src="assets/projects/thermal_picu.png" alt="Thermal imaging research" />
+                  <div class="project-card__body">
+                    <h4>Thermal Imaging for Shock</h4>
+                    <p>Deep learning on thermal videos for early hemodynamic shock detection.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a class="project-card" href="https://www.frontiersin.org/articles/10.3389/fphys.2022.921884/full" target="_blank" rel="noopener">
+                  <img src="assets/projects/hypothermia.png" alt="Hypothermia prediction" />
+                  <div class="project-card__body">
+                    <h4>Hypothermia Prediction</h4>
+                    <p>Machine learning for early prediction of hypothermia in pediatric ICUs.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a class="project-card" href="https://www.sciencedirect.com/science/article/pii/S2211335524003103" target="_blank" rel="noopener">
+                  <img src="assets/illus_EHL.jpg" alt="Digital health literacy" />
+                  <div class="project-card__body">
+                    <h4>Digital Health Equity</h4>
+                    <p>Electronic health literacy intersecting social determinants of health.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
 
-        <!-- 2025 -->
-        <h3 class="pub-year">2025</h3>
-        <ol class="pub-list">
-          <li>
-            <div class="pub-entry">
-              <span class="pub-badge badge-journal">Journal</span>
-              <span class="pub-title">Prevalence and Predictors of Subclinical Cardiomyopathy in Patients With Type 2 Diabetes in a Health System</span>
-              <span class="pub-authors"><strong>Nagori A</strong>, Segar MW, Keshvani N, Patel L, et al., Pandey A.</span>
-              <span class="pub-venue"><em>Journal of Diabetes Science and Technology</em>, 19(3):699–704, 2025.</span>
-              <span class="pub-links">
-                <a href="https://journals.sagepub.com/doi/abs/10.1177/19322968231212219" target="_blank" rel="noopener"><i class="fas fa-link"></i> Paper</a>
-                <button class="btn-cite">BIB</button>
-                <span class="__dimensions_badge_embed__" data-doi="10.1177/19322968231212219" data-style="small_rectangle" data-legend="no-legend"></span>
-              </span>
-              <div class="bib-block"><pre>@article{nagori2025diabetes,
-  title   = {Prevalence and Predictors of Subclinical Cardiomyopathy
-             in Patients With Type 2 Diabetes in a Health System},
-  author  = {Nagori, Aditya and Segar, Matthew W and Keshvani, Neil
-             and Patel, Lajjaben and others and Pandey, Ambarish},
-  journal = {Journal of Diabetes Science and Technology},
-  volume  = {19},
-  number  = {3},
-  pages   = {699--704},
-  year    = {2025},
-  doi     = {10.1177/19322968231212219}
-}</pre></div>
-            </div>
-          </li>
-          <li>
-            <div class="pub-entry">
-              <span class="pub-badge badge-journal">Journal</span>
-              <span class="pub-title">Randomized Trial of a Transthoracic Echocardiography Value Tool</span>
-              <span class="pub-authors">Raiker N*, <strong>Nagori A*</strong>, Dirisala K, Hong P, Lonergan K, Matulevicius S, Peterson G, Pandey A, Vigen R. <small>(*equal contribution)</small></span>
-              <span class="pub-venue"><em>Journal of the American Society of Echocardiography</em>, 38(10):978–980, 2025.</span>
-              <span class="pub-links">
-                <a href="https://www.sciencedirect.com/science/article/pii/S0894731725003372" target="_blank" rel="noopener"><i class="fas fa-link"></i> Paper</a>
-                <button class="btn-cite">BIB</button>
-                <span class="__dimensions_badge_embed__" data-doi="10.1016/j.echo.2025.06.011" data-style="small_rectangle" data-legend="no-legend"></span>
-              </span>
-              <div class="bib-block"><pre>@article{raiker2025rct,
-  title   = {A Randomized Controlled Trial of a Clinical Support Tool
-             to Increase Value in Transthoracic Echocardiography},
-  author  = {Raiker, Nisha and Nagori, Aditya and Dirisala, Karunakar
-             and Hong, Patrick and Lonergan, Katy and Matulevicius, Susan
-             and Peterson, Gail and Pandey, Ambarish and Vigen, Rebecca},
-  journal = {Journal of the American Society of Echocardiography},
-  volume  = {38},
-  number  = {10},
-  pages   = {978--980},
-  year    = {2025},
-  doi     = {10.1016/j.echo.2025.06.011}
-}</pre></div>
-            </div>
-          </li>
-          <li>
-            <div class="pub-entry">
-              <span class="pub-badge badge-conf">Conference</span>
-              <span class="pub-title">Contextual Phenotyping of Pediatric Sepsis Cohort Using Large Language Models</span>
-              <span class="pub-authors"><strong>Nagori A</strong>, Gautam A, Wiens MO, Nguyen V, Kenya Mugisha N, Kabakyenga J, Kissoon N, Ansermino JM, et al.</span>
-              <span class="pub-venue"><em>AMIA Annual Symposium Proceedings</em>, 2025:929–938.</span>
-              <span class="pub-links">
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12919534/" target="_blank" rel="noopener"><i class="fas fa-link"></i> Paper</a>
-                &nbsp;
-                <a href="https://arxiv.org/abs/2505.09805" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> arXiv</a>
-                <button class="btn-cite">BIB</button>
-              </span>
-              <div class="bib-block"><pre>@inproceedings{nagori2025sepsis,
-  title     = {Contextual Phenotyping of Pediatric Sepsis Cohort
-               Using Large Language Models},
-  author    = {Nagori, Aditya and Gautam, Ayush and Wiens, Matthew O
-               and Nguyen, Vuong and Mugisha, Nathan Kenya
-               and Kabakyenga, Jerome and Kissoon, Niranjan
-               and Ansermino, John Mark and others},
-  booktitle = {AMIA Annual Symposium Proceedings},
-  pages     = {929--938},
-  year      = {2025}
-}</pre></div>
-            </div>
-          </li>
-          <li>
-            <div class="pub-entry">
-              <span class="pub-badge badge-preprint">Preprint</span>
-              <span class="pub-title">Agentic Hybrid RAG for Scientific Review</span>
-              <span class="pub-authors"><strong>Nagori A</strong>, Casonatto RA, Gautam A, Cheruvu AMS, Kamaleswaran R.</span>
-              <span class="pub-venue"><em>arXiv</em>, 2025.</span>
-              <span class="pub-links">
-                <a href="https://arxiv.org/abs/2508.05660" target="_blank" rel="noopener"><i class="fas fa-link"></i> arXiv</a>
-                <button class="btn-cite">BIB</button>
-              </span>
-              <div class="bib-block"><pre>@misc{nagori2025rag,
-  title         = {Open-Source Agentic Hybrid RAG Framework
-                   for Scientific Literature Review},
-  author        = {Nagori, Aditya and Casonatto, Ricardo Accorsi
-                   and Gautam, Ayush and Cheruvu, Abhinav Manikantha Sai
-                   and Kamaleswaran, Rishikesan},
-  year          = {2025},
+            <!-- Publications -->
+            <div id="publications" style="margin-top:2.5rem;">
+              <h2 class="section-title">selected publications</h2>
+              <p class="section-subtitle">
+                Full list on <a href="https://scholar.google.com/citations?user=63Vkr3EAAAAJ&hl=en" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a>.
+              </p>
+
   eprint        = {2508.05660},
   archivePrefix = {arXiv},
   doi           = {10.48550/arXiv.2508.05660}
@@ -285,7 +170,9 @@
         </ol>
 
         <!-- 2023-2024 -->
-        <h3 class="pub-year">2023&ndash;2024</h3>
+        </details>
+        <details class="pub-year-details">
+        <summary class="pub-year">2023&ndash;2024</summary>
         <ol class="pub-list">
           <li>
             <div class="pub-entry">
@@ -384,7 +271,9 @@
         </ol>
 
         <!-- 2022-2023 -->
-        <h3 class="pub-year">2022&ndash;2023</h3>
+        </details>
+        <details class="pub-year-details">
+        <summary class="pub-year">2022&ndash;2023</summary>
         <ol class="pub-list">
           <li>
             <div class="pub-entry">
@@ -581,7 +470,9 @@
         </ol>
 
         <!-- 2019-2020 -->
-        <h3 class="pub-year">2019&ndash;2020</h3>
+        </details>
+        <details class="pub-year-details">
+        <summary class="pub-year">2019&ndash;2020</summary>
         <ol class="pub-list">
           <li>
             <div class="pub-entry">
@@ -701,7 +592,9 @@
         </ol>
 
         <!-- 2017-2018 -->
-        <h3 class="pub-year">2017&ndash;2018</h3>
+        </details>
+        <details class="pub-year-details">
+        <summary class="pub-year">2017&ndash;2018</summary>
         <ol class="pub-list">
           <li>
             <div class="pub-entry">
@@ -799,64 +692,121 @@
             </div>
           </li>
         </ol>
-      </div>
-    </section>
+        </details>
+            </div><!-- /publications -->
+          </div><!-- /col-lg-7 -->
+          <!-- Right: News -->
+          <div class="col-lg-5" id="news">
+            <h2 class="section-title">news</h2>
+            <table class="news-table">
+              <tbody>
+                <tr>
+                  <td class="news-date">Mar 2026</td>
+                  <td>New version of <a href="https://play.google.com/store/apps/details?id=appinventor.ai_aditya_mits13.anthroCalc&hl=en_US" target="_blank" rel="noopener"><strong>AnthroCal</strong></a> launched on Google Play &mdash; mobile app for child growth assessment.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">Mar 2026</td>
+                  <td>Paper on <em>Intraoperative Risk Phenotyping</em> accepted at <strong>AMIA 2026 Amplify: Informatics Summit</strong>, Denver.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">Nov 2025</td>
+                  <td>Talk on <em>Contextual Phenotyping of Pediatric Sepsis Using LLMs</em> at <strong>AMIA Annual Symposium</strong>, Atlanta.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">Jun 2025</td>
+                  <td><a href="https://arxiv.org/abs/2508.05660" target="_blank" rel="noopener">Agentic Hybrid RAG</a> preprint on arXiv.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">May 2025</td>
+                  <td><a href="https://www.sciencedirect.com/science/article/pii/S0894731725003372" target="_blank" rel="noopener">RCT of a TTE decision tool</a> in <em>JASE</em>.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">May 2025</td>
+                  <td><a href="https://arxiv.org/abs/2505.09805" target="_blank" rel="noopener">Pediatric sepsis LLM phenotyping</a> selected for oral at <strong>AMIA 2025</strong>.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">2024</td>
+                  <td><a href="https://leaderboard-peds-sepsis-data-challenge-2024.streamlit.app" target="_blank" rel="noopener">Pediatric Sepsis Challenge leaderboard</a> launched.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">2024</td>
+                  <td><a href="https://github.com/Kamaleswaran-Lab/The-2024-Pediatric-Sepsis-Challenge/tree/main" target="_blank" rel="noopener">Challenge code &amp; benchmarks</a> open-sourced.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">2024</td>
+                  <td><a href="https://www.sciencedirect.com/science/article/pii/S2211335524003103" target="_blank" rel="noopener">Digital health literacy &amp; SDoH</a> in <em>Preventive Medicine Reports</em>.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">2023</td>
+                  <td><a href="https://doi.org/10.1016/j.ajpc.2023.100557" target="_blank" rel="noopener">SDoH in low-income heart failure</a> in <em>AJPC</em>.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">May 2023</td>
+                  <td>Talk on <em>Prognosticating Diabetic Cardiomyopathy Risk Using ML and WATCH-DM</em> at <strong>AMIA CIC</strong>, Chicago.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">May 2023</td>
+                  <td>Talk on <em>Prospectively Validated Generalised Shock Prediction in ICUs</em> at <strong>AMIA CIC</strong>, Chicago.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">2022</td>
+                  <td><a href="https://www.frontiersin.org/articles/10.3389/fgene.2022.858252/full" target="_blank" rel="noopener">Genomic COVID-19 surveillance with LMs</a> in <em>Frontiers in Genetics</em>.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">2020</td>
+                  <td>Book chapter on <a href="https://www.sciencedirect.com/science/article/pii/B9780128172261000017" target="_blank" rel="noopener">Interpretable AI in Healthcare</a>, Elsevier.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">2019</td>
+                  <td><a href="https://www.nature.com/articles/s41598-018-36586-8" target="_blank" rel="noopener">Predicting hemodynamic shock from thermal images</a> in <em>Scientific Reports</em>.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">May 2019</td>
+                  <td>Talk on <em>Non-Invasive Shock Prediction Using ML on Thermal Images</em> at <strong>AMIA CIC</strong>, Atlanta.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">May 2019</td>
+                  <td>Talk on <em>Childhood Asthma Exacerbation Prediction</em> at <strong>AMIA CIC</strong>, Atlanta.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">May 2019</td>
+                  <td>Invited talk on <em>Hemodynamic Shock Prediction in the ICU</em> at <strong>MedStar Health</strong>, Washington D.C.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">Dec 2018</td>
+                  <td>Invited talk on <em>Critical Event Predictions in ICU Patients Using AI</em> at <strong>IEEE HiPC 2018</strong>, Bangalore.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">Mar 2017</td>
+                  <td>Poster on <em>SAFE-ICU: Integrative Pediatric ICU Big-Data Warehouse</em> at Research Showcase, IIIT Delhi.</td>
+                </tr>
+                <tr>
+                  <td class="news-date">Oct 2016</td>
+                  <td>Poster on <em>Forecasting Childhood Asthma Exacerbations with ML</em> at <strong>EASyM 2016</strong>, Berlin.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!-- /col-lg-5 right -->
 
-    <!-- Projects / Research Spotlights -->
-    <section id="projects" class="content-section">
-      <div class="container">
-        <h2 class="section-title">projects</h2>
-
-        <div class="row g-4 project-grid">
-          <div class="col-sm-6 col-lg-4">
-            <a class="project-card" href="https://arxiv.org/abs/2508.05660" target="_blank" rel="noopener">
-              <img src="assets/projects/agentic_rag.png" alt="Agentic Hybrid RAG workflow" />
-              <div class="project-card__body">
-                <h4>Agentic Hybrid RAG</h4>
-                <p>Multi-agent RAG for scientific literature review and perioperative reasoning.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <a class="project-card" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4248013" target="_blank" rel="noopener">
-              <img src="assets/projects/prospective_vitals_ml.png" alt="Hemodynamic shock prediction" />
-              <div class="project-card__body">
-                <h4>Prospective Shock Prediction</h4>
-                <p>Validated shock forecasting in resource-limited pediatric ICUs.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <a class="project-card" href="https://www.nature.com/articles/s41598-018-36586-8" target="_blank" rel="noopener">
-              <img src="assets/projects/thermal_picu.png" alt="Thermal imaging research" />
-              <div class="project-card__body">
-                <h4>Thermal Imaging for Shock</h4>
-                <p>Deep learning on thermal videos for early hemodynamic shock detection.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <a class="project-card" href="https://www.frontiersin.org/articles/10.3389/fphys.2022.921884/full" target="_blank" rel="noopener">
-              <img src="assets/projects/hypothermia.png" alt="Hypothermia prediction" />
-              <div class="project-card__body">
-                <h4>Hypothermia Prediction</h4>
-                <p>Machine learning for early prediction of hypothermia in pediatric ICUs.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <a class="project-card" href="https://www.sciencedirect.com/science/article/pii/S2211335524003103" target="_blank" rel="noopener">
-              <img src="assets/illus_EHL.jpg" alt="Digital health literacy" />
-              <div class="project-card__body">
-                <h4>Digital Health Equity</h4>
-                <p>Electronic health literacy intersecting social determinants of health.</p>
-              </div>
-            </a>
-          </div>
         </div>
       </div>
     </section>
 
+    <!-- Service & Peer Review -->
+    <section id="service" class="content-section">
+      <div class="container">
+        <h2 class="section-title">service</h2>
+        <h3 class="service-heading">Peer Review</h3>
+        <p class="service-text">
+          I review manuscripts for
+          <em>Nature Scientific Reports</em>,
+          <em>BMC Pediatrics</em>,
+          <em>Frontiers in Pediatrics</em>,
+          <em>BMC Medical Informatics and Decision Making</em>, and
+          <em>BMC Endocrine Disorders</em>.
+        </p>
+      </div>
+    </section>
     <!-- Media & Outreach -->
     <section id="media" class="content-section">
       <div class="container">
@@ -885,6 +835,7 @@
     <section id="contact" class="content-section">
       <div class="container">
         <h2 class="section-title">contact</h2>
+
         <div class="contact-block">
           <p>
             I am open to clinical deployments, translational research collaborations, and mentoring data scientists.

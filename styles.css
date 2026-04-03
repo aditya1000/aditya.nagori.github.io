@@ -287,17 +287,103 @@ img {
   font-size: 0.88rem;
 }
 
+/* Talks & Posters collapsible */
+.talks-details {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 0.75rem;
+}
+
+.talks-summary {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--global-divider-color);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+  margin-bottom: 0.25rem;
+}
+
+.talks-summary::-webkit-details-marker { display: none; }
+
+.talks-summary::after {
+  content: '▸';
+  font-size: 0.85rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.talks-details[open] > .talks-summary::after {
+  transform: rotate(90deg);
+}
+
+.talks-category {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--global-text-color-light);
+  margin: 1rem 0 0.35rem;
+}
+
+.talks-details .news-table {
+  margin-bottom: 0.5rem;
+}
+
+.news-category-row td {
+  padding-top: 0.9rem;
+  padding-bottom: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--global-text-color-light);
+  border-bottom: none;
+}
+
 /* ---------- Publications ---------- */
+.pub-year-details {
+  border-top: 1px solid var(--global-divider-color);
+  margin-top: 1.5rem;
+}
+
+.pub-year-details + .pub-year-details {
+  margin-top: 0.5rem;
+}
+
 .pub-year {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--global-divider-color);
-  border-top: 1px solid var(--global-divider-color);
   padding-top: 0.75rem;
-  margin-top: 1.5rem;
   margin-bottom: 1rem;
-  text-align: right;
+  text-align: left;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.pub-year::-webkit-details-marker { display: none; }
+
+.pub-year::after {
+  content: '▸';
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.pub-year-details[open] > .pub-year::after {
+  transform: rotate(90deg);
 }
 
 .pub-list {
@@ -359,7 +445,9 @@ img {
 }
 
 .pub-authors strong {
-  color: var(--global-text-color);
+  color: var(--global-theme-color);
+  font-weight: 700;
+  border-bottom: 1px dotted var(--global-theme-color);
 }
 
 .pub-venue {
@@ -386,6 +474,58 @@ img {
   color: var(--global-theme-color);
   border-color: var(--global-theme-color);
   text-decoration: none;
+}
+
+/* BibTeX / cite toggle button */
+.btn-cite {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: var(--global-text-color);
+  border: 1px solid var(--global-text-color);
+  border-radius: 3px;
+  padding: 0.15rem 0.6rem;
+  margin-right: 0.35rem;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-cite:hover,
+.btn-cite.active {
+  color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+}
+
+/* Collapsible BibTeX block */
+.bib-block {
+  display: none;
+  margin-top: 0.55rem;
+  background: #f6f8fa;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+  padding: 0.7rem 0.9rem;
+}
+
+.bib-block.open {
+  display: block;
+}
+
+.bib-block pre {
+  margin: 0;
+  font-size: 0.77rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: #24292e;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+/* Dimensions.ai badge alignment */
+.__dimensions_badge_embed__ {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.25rem;
 }
 
 /* ---------- Projects ---------- */
@@ -466,6 +606,23 @@ img {
 }
 
 /* ---------- Contact ---------- */
+.service-heading {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.4rem;
+}
+
+.service-text {
+  font-size: 0.95rem;
+  color: var(--global-text-color);
+  margin-bottom: 1.5rem;
+  max-width: 620px;
+}
+
 .contact-block {
   max-width: 620px;
 }
