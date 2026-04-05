@@ -261,30 +261,107 @@ img {
 }
 
 /* ---------- News Table ---------- */
+
+/* Daily-Prophet newspaper wrapper */
+.newspaper {
+  background: #fdf8f0;
+  border: 1px solid #c8b89a;
+  border-radius: 4px;
+  padding: 0 1.1rem 1.1rem;
+  box-shadow: inset 0 0 40px rgba(180,140,80,0.07), 2px 3px 10px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.newspaper__rule {
+  height: 2px;
+  background: #2c1a0e;
+  margin: 0.6rem 0 0;
+}
+
+.newspaper__rule--double {
+  height: 1px;
+  background: #2c1a0e;
+  box-shadow: 0 3px 0 #2c1a0e;
+  margin: 0.35rem 0 0.9rem;
+}
+
+.newspaper__masthead {
+  text-align: center;
+  padding: 0.6rem 0 0.2rem;
+}
+
+.newspaper__vol {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 0.72rem;
+  color: #5a3e28;
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.newspaper__title {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: #1a0e06;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.25rem;
+  border: none;
+  padding: 0;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.newspaper__date {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #5a3e28;
+  display: block;
+}
+
 .news-table {
   width: 100%;
   border-collapse: collapse;
 }
 
 .news-table td {
-  padding: 0.6rem 0;
+  padding: 0.55rem 0;
   vertical-align: top;
-  border-bottom: 1px solid var(--global-divider-color);
-  font-size: 0.95rem;
+  border-bottom: 1px solid #c8b89a;
+  font-size: 0.9rem;
   line-height: 1.6;
+  font-family: 'IM Fell English', Georgia, serif;
+  color: #1a0e06;
 }
 
 .news-table tr:last-child td {
   border-bottom: none;
 }
 
+.news-table td a {
+  color: #7a2d00;
+  font-weight: 600;
+}
+
+.news-table td a:hover {
+  color: #2c1a0e;
+  text-decoration: underline;
+}
+
+.news-table td strong {
+  color: #2c1a0e;
+}
+
 .news-date {
   white-space: nowrap;
   font-weight: 700;
-  color: var(--global-theme-color);
-  padding-right: 1.25rem;
-  width: 100px;
-  font-size: 0.88rem;
+  font-family: 'Cinzel', Georgia, serif;
+  color: #5a3e28;
+  padding-right: 1rem;
+  width: 90px;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
 }
 
 /* Talks & Posters collapsible */

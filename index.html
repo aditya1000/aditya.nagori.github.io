@@ -27,7 +27,7 @@
     <!-- Fonts: Roboto + Roboto Slab (al-folio style) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@300;400;500;700&family=Cinzel:wght@400;700;900&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -162,7 +162,7 @@
               </p>
 
         <!-- 2025 -->
-        <details class="pub-year-details" open>
+        <details class="pub-year-details">
         <summary class="pub-year">2025</summary>
         <ol class="pub-list">
           <li>
@@ -794,7 +794,14 @@
           </div><!-- /col-lg-7 -->
           <!-- Right: News -->
           <div class="col-lg-5" id="news">
-            <h2 class="section-title">news</h2>
+            <div class="newspaper">
+              <div class="newspaper__rule"></div>
+              <div class="newspaper__masthead">
+                <span class="newspaper__vol">Vol. X &mdash; No. 42</span>
+                <h2 class="newspaper__title">The Research Chronicle</h2>
+                <span class="newspaper__date">April 2026 &bull; Clinical AI &amp; Biomedical Data Science</span>
+              </div>
+              <div class="newspaper__rule newspaper__rule--double"></div>
             <table class="news-table">
               <tbody>
                 <tr>
@@ -883,6 +890,7 @@
                 </tr>
               </tbody>
             </table>
+            </div><!-- /newspaper -->
           </div><!-- /col-lg-5 right -->
 
         </div>
