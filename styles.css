@@ -1,29 +1,41 @@
 /* ==========================================================================
-   al-folio inspired theme — Static CSS for GitHub Pages
-   Fonts: Roboto (body) + Roboto Slab (headings)
-   Theme color: #0076df (blue)
-   Based on: https://github.com/alshedivat/al-folio
+   The Research Chronicle — Wizarding Newspaper Theme
+   Fonts: Cinzel (display) · IM Fell English (serif body) · Roboto (UI)
+   Palette: aged parchment · sepia ink · dark walnut · crimson wax
    ========================================================================== */
 
-/* ---------- CSS Custom Properties (Light theme) ---------- */
+/* ---------- CSS Custom Properties ---------- */
 :root {
-  --global-bg-color: #ffffff;
-  --global-code-bg-color: rgba(181, 9, 172, 0.05);
-  --global-text-color: #000000;
-  --global-text-color-light: #828282;
-  --global-theme-color: #0076df;
-  --global-hover-color: #0076df;
-  --global-hover-text-color: #ffffff;
-  --global-footer-bg-color: #1c1c1d;
-  --global-footer-text-color: #d2d2d2;
-  --global-footer-link-color: #ffffff;
-  --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #ffffff;
-  --global-highlight-color: #b71c1c;
+  --parchment:        #fdf8f0;
+  --parchment-dark:   #f5edd8;
+  --parchment-border: #c8b89a;
+  --ink:              #1a0e06;
+  --ink-light:        #5a3e28;
+  --ink-faint:        #9a7d5e;
+  --crimson:          #7a1c2e;
+  --gold:             #b8860b;
+  --seal-wax:         #8b1a1a;
+
+  /* keep legacy variables so existing rules still resolve */
+  --global-bg-color:          var(--parchment);
+  --global-code-bg-color:     rgba(181,9,172,0.05);
+  --global-text-color:        var(--ink);
+  --global-text-color-light:  var(--ink-faint);
+  --global-theme-color:       var(--crimson);
+  --global-hover-color:       var(--crimson);
+  --global-hover-text-color:  #ffffff;
+  --global-footer-bg-color:   #1c1410;
+  --global-footer-text-color: #d2c4b0;
+  --global-footer-link-color: #f5edd8;
+  --global-divider-color:     var(--parchment-border);
+  --global-card-bg-color:     var(--parchment);
+  --global-highlight-color:   var(--crimson);
 
   --max-content-width: 1100px;
-  --font-body: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  --font-heading: 'Roboto Slab', Georgia, serif;
+  --font-body:    'IM Fell English', Georgia, serif;
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-heading: 'Cinzel', Georgia, serif;
+  --font-ui:      'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ---------- Reset & Base ---------- */
@@ -40,32 +52,34 @@ html {
 
 body {
   margin: 0;
-  padding-top: 57px; /* fixed navbar offset */
+  padding-top: 57px;
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7;
-  color: var(--global-text-color);
-  background-color: var(--global-bg-color);
+  line-height: 1.75;
+  color: var(--ink);
+  background-color: var(--parchment);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 500;
-  color: var(--global-text-color);
+  font-weight: 700;
+  color: var(--ink);
   scroll-margin-top: 66px;
 }
 
 a {
-  color: var(--global-theme-color);
+  color: var(--crimson);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--global-hover-color);
+  color: var(--ink);
   text-decoration: underline;
 }
 
@@ -82,48 +96,51 @@ img {
 /* ---------- Navbar ---------- */
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  border-bottom: 3px double var(--parchment-border);
+  background-color: var(--parchment-dark);
+  opacity: 0.98;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   transition: box-shadow 0.3s ease;
 }
 
 .navbar.scrolled {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 14px rgba(44,26,14,0.15);
 }
 
 .navbar .navbar-brand {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--global-text-color);
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .navbar .navbar-brand:hover {
   text-decoration: none;
-  color: var(--global-theme-color);
+  color: var(--crimson);
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: var(--global-text-color);
-  font-size: 0.9rem;
+  color: var(--ink-light);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
   font-weight: 400;
   padding: 0.5rem 0.85rem;
-  text-transform: lowercase;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
   transition: color 0.2s ease;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: var(--global-hover-color);
+  color: var(--crimson);
   text-decoration: none;
 }
 
 .navbar-light .navbar-nav .nav-item.active > .nav-link {
   font-weight: 700;
-  color: var(--global-theme-color);
+  color: var(--crimson);
 }
 
 .navbar-toggler {
@@ -139,6 +156,7 @@ img {
 .about-section {
   padding-top: 3.5rem;
   padding-bottom: 3rem;
+  border-bottom: 3px double var(--parchment-border);
 }
 
 .profile-col {
@@ -155,30 +173,36 @@ img {
   max-width: 220px;
   border-radius: 50%;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 0 4px var(--parchment-border), 0 4px 18px rgba(44,26,14,0.18);
+  filter: sepia(12%);
 }
 
 .profile-name {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 900;
   margin-bottom: 0.15rem;
-  color: var(--global-text-color);
+  color: var(--ink);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .profile-title {
+  font-family: var(--font-body);
+  font-style: italic;
   font-size: 0.95rem;
-  color: var(--global-text-color-light);
+  color: var(--ink-light);
   margin-bottom: 0.2rem;
 }
 
 .profile-affiliation {
+  font-family: var(--font-body);
   font-size: 0.9rem;
   margin-bottom: 0.75rem;
 }
 
 .profile-affiliation a {
-  color: var(--global-theme-color);
+  color: var(--crimson);
 }
 
 /* Social icons */
@@ -233,6 +257,20 @@ img {
   margin-bottom: 0;
 }
 
+/* ---------- Two-column layout ---------- */
+.two-col-layout {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 2rem 3rem;
+  align-items: start;
+}
+
+@media (max-width: 767px) {
+  .two-col-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Content Sections ---------- */
 .content-section {
   padding-top: 2.5rem;
@@ -240,14 +278,15 @@ img {
 }
 
 .section-title {
-  font-family: var(--font-heading);
-  font-size: 1.75rem;
-  font-weight: 500;
-  color: var(--global-text-color);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--ink);
   margin-bottom: 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--global-divider-color);
-  text-transform: lowercase;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px double var(--parchment-border);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .section-subtitle {
@@ -425,7 +464,7 @@ img {
 
 /* ---------- Publications ---------- */
 .pub-year-details {
-  border-top: 1px solid var(--global-divider-color);
+  border-top: 1px solid var(--parchment-border);
   margin-top: 1.5rem;
 }
 
@@ -434,10 +473,10 @@ img {
 }
 
 .pub-year {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--global-text-color);
+  color: var(--ink);
   padding-top: 0.75rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -448,6 +487,8 @@ img {
   justify-content: center;
   gap: 0.5rem;
   user-select: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .pub-year::-webkit-details-marker { display: none; }
@@ -509,27 +550,33 @@ img {
 }
 
 .pub-title {
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.4;
-  color: var(--global-text-color);
+  color: var(--ink);
 }
 
 .pub-authors {
+  font-family: var(--font-body);
+  font-style: italic;
   font-size: 0.9rem;
-  color: var(--global-text-color-light);
+  color: var(--ink-light);
   line-height: 1.5;
 }
 
 .pub-authors strong {
-  color: var(--global-theme-color);
+  color: var(--crimson);
+  font-style: normal;
   font-weight: 700;
-  border-bottom: 1px dotted var(--global-theme-color);
+  border-bottom: 1px dotted var(--crimson);
 }
 
 .pub-venue {
+  font-family: var(--font-body);
+  font-style: italic;
   font-size: 0.88rem;
-  color: var(--global-text-color-light);
+  color: var(--ink-faint);
 }
 
 .pub-links {
@@ -538,49 +585,52 @@ img {
 
 .pub-links a {
   display: inline-block;
-  font-size: 0.82rem;
-  color: var(--global-text-color);
-  border: 1px solid var(--global-text-color);
-  border-radius: 3px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--ink);
+  border: 1px solid var(--parchment-border);
+  border-radius: 2px;
   padding: 0.15rem 0.6rem;
   margin-right: 0.35rem;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  background: var(--parchment-dark);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .pub-links a:hover {
-  color: var(--global-theme-color);
-  border-color: var(--global-theme-color);
+  color: var(--crimson);
+  border-color: var(--crimson);
+  background: var(--parchment);
   text-decoration: none;
 }
 
 /* BibTeX / cite toggle button */
 .btn-cite {
   display: inline-block;
-  font-size: 0.82rem;
-  color: var(--global-text-color);
-  border: 1px solid var(--global-text-color);
-  border-radius: 3px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--ink);
+  border: 1px solid var(--parchment-border);
+  border-radius: 2px;
   padding: 0.15rem 0.6rem;
   margin-right: 0.35rem;
-  background: none;
+  background: var(--parchment-dark);
   cursor: pointer;
-  font-family: var(--font-body);
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-cite:hover,
 .btn-cite.active {
-  color: var(--global-theme-color);
-  border-color: var(--global-theme-color);
+  color: var(--crimson);
+  border-color: var(--crimson);
 }
 
 /* Collapsible BibTeX block */
 .bib-block {
   display: none;
   margin-top: 0.55rem;
-  background: #f6f8fa;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 4px;
+  background: var(--parchment-dark);
+  border: 1px solid var(--parchment-border);
+  border-radius: 3px;
   padding: 0.7rem 0.9rem;
 }
 
@@ -594,7 +644,7 @@ img {
   line-height: 1.55;
   white-space: pre-wrap;
   word-break: break-all;
-  color: #24292e;
+  color: var(--ink-light);
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
@@ -612,28 +662,35 @@ img {
 
 .project-card {
   display: block;
-  background: var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
-  border-radius: 6px;
+  background: var(--parchment);
+  border: 1px solid var(--parchment-border);
+  border-radius: 4px;
   overflow: hidden;
   text-decoration: none;
-  color: var(--global-text-color);
+  color: var(--ink);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
   height: 100%;
+  box-shadow: 2px 2px 6px rgba(44,26,14,0.08);
 }
 
 .project-card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(44,26,14,0.18);
   transform: translateY(-3px);
   text-decoration: none;
-  color: var(--global-text-color);
+  color: var(--ink);
 }
 
 .project-card img {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-bottom: 1px solid var(--global-divider-color);
+  border-bottom: 1px solid var(--parchment-border);
+  filter: sepia(18%) contrast(0.95);
+  transition: filter 0.3s ease;
+}
+
+.project-card:hover img {
+  filter: sepia(0%) contrast(1);
 }
 
 .project-card__body {
@@ -641,21 +698,25 @@ img {
 }
 
 .project-card__body h4 {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
   margin: 0 0 0.35rem;
-  color: var(--global-text-color);
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   transition: color 0.2s ease;
 }
 
 .project-card:hover .project-card__body h4 {
-  color: var(--global-theme-color);
+  color: var(--crimson);
 }
 
 .project-card__body p {
-  font-size: 0.85rem;
-  color: var(--global-text-color-light);
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--ink-light);
   margin: 0;
   line-height: 1.5;
 }
@@ -669,7 +730,8 @@ img {
 
 .media-list li {
   padding: 0.6rem 0;
-  border-bottom: 1px solid var(--global-divider-color);
+  border-bottom: 1px solid var(--parchment-border);
+  font-family: var(--font-body);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -679,23 +741,26 @@ img {
 }
 
 .media-list a {
-  font-weight: 500;
+  font-weight: 700;
+  color: var(--crimson);
 }
 
 /* ---------- Contact ---------- */
 .service-heading {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--global-text-color-light);
+  letter-spacing: 0.1em;
+  color: var(--ink-light);
   margin-bottom: 0.4rem;
 }
 
 .service-text {
+  font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--global-text-color);
+  font-style: italic;
+  color: var(--ink);
   margin-bottom: 1.5rem;
   max-width: 620px;
 }
@@ -705,18 +770,22 @@ img {
 }
 
 .contact-block p {
+  font-family: var(--font-body);
   font-size: 1rem;
-  color: var(--global-text-color);
+  color: var(--ink);
   margin-bottom: 1rem;
 }
 
 /* ---------- Footer ---------- */
 footer {
-  border-top: 1px solid var(--global-divider-color);
+  border-top: 3px double var(--parchment-border);
   padding: 2rem 0;
   margin-top: 3rem;
+  font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--global-text-color-light);
+  font-style: italic;
+  color: var(--ink-light);
+  background: var(--parchment-dark);
 }
 
 .footer-inner {
@@ -728,11 +797,11 @@ footer {
 }
 
 footer a {
-  color: var(--global-theme-color);
+  color: var(--crimson);
 }
 
 footer a:hover {
-  color: var(--global-hover-color);
+  color: var(--ink);
 }
 
 /* ---------- Utilities ---------- */
