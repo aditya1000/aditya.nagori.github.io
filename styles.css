@@ -6,9 +6,9 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  --parchment:        #fdf8f0;
-  --parchment-dark:   #f5edd8;
-  --parchment-border: #c8b89a;
+  --parchment:        #efefef;
+  --parchment-dark:   #fafafa;
+  --parchment-border: #ffffff;
   --ink:              #1a0e06;
   --ink-light:        #5a3e28;
   --ink-faint:        #9a7d5e;
