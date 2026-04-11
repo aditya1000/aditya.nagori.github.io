@@ -205,6 +205,28 @@ img {
   color: var(--crimson);
 }
 
+.cv-btn {
+  display: inline-block;
+  margin-top: 0.85rem;
+  padding: 0.38rem 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--parchment) !important;
+  background: var(--crimson);
+  border: 2px solid var(--crimson);
+  border-radius: 3px;
+  text-decoration: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cv-btn:hover {
+  background: transparent;
+  color: var(--crimson) !important;
+}
+
 /* Social icons */
 .social-icons {
   display: flex;
